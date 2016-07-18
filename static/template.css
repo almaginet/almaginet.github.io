@@ -113,7 +113,7 @@ h2{
 	font-size: 15px;
 }
 .logo{
-	background: #009688 url(../media/logo.png) no-repeat left 8px center;
+	background: #2196F3 url(../media/logo.png) no-repeat left 8px center;
 	background-size: 36px;
 	padding-left: 40px;
 }
@@ -171,7 +171,7 @@ h2{
 .team h3{
 	text-align: center;
 	padding: 20px;
-	color: #009688;
+	color: #2196F3;
 	font-size: 30px;
 }
 .team span{
@@ -189,7 +189,7 @@ h2{
 	vertical-align: top;
 	width: 200px;
 	height: 200px;
-	background: #009688;
+	background: #2196F3;
 	opacity: 0.9;
 	color: #fff;
 	padding: 5px 5px;
@@ -266,7 +266,7 @@ footer td a:hover{
 	display: block;
 	width: 100px;
 	height: 100px;
-	background: #009688 url(../media/logo.png) no-repeat center center;
+	background: #2196F3 url(../media/logo.png) no-repeat center center;
 	background-size: 80%;
 	border-radius: 50%;
 	/* border: 3px solid rgb(119, 238, 178); */
@@ -443,7 +443,7 @@ footer td a:hover{
 	background-size: 25px;
 }
 .location{
-	background: #009688 url(../media/icons/100.png) no-repeat left 3px center;
+	background: #2196F3 url(../media/icons/100.png) no-repeat left 3px center;
 	background-size: 25px;
 }
 
