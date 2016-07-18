@@ -22,11 +22,13 @@ box-sizing:border-box;
 	background: #333 url(../media/back01.jpg) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
+	min-height: 100%;
 }
 
 .cortain{
 	width: 100%;
 	background: rgba(15, 33, 32, 0.65);
+	min-height: 100%;
 }
 
 .cortain p{
