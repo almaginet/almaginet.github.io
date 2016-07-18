@@ -26,7 +26,7 @@ box-sizing:border-box;
 
 .cortain{
 	width: 100%;
-	background: rgba(81, 33, 101, 0.8);
+	background: rgba(29, 82, 80, 0.65);
 }
 
 .cortain p{
@@ -113,7 +113,7 @@ h2{
 	font-size: 15px;
 }
 .logo{
-	background: #7b55ea url(../media/logo.png) no-repeat left 8px center;
+	background: #2196f3 url(../media/logo.png) no-repeat left 8px center;
 	background-size: 36px;
 	padding-left: 40px;
 }
@@ -171,7 +171,7 @@ h2{
 .team h3{
 	text-align: center;
 	padding: 20px;
-	color: #715e9e;
+	color: rgb(142, 158, 239);
 	font-size: 30px;
 }
 .team span{
@@ -189,7 +189,7 @@ h2{
 	vertical-align: top;
 	width: 200px;
 	height: 200px;
-	background: #9577ee;
+	background: #8294ee;
 	opacity: 0.9;
 	color: #fff;
 	padding: 5px 5px;
@@ -199,7 +199,7 @@ h2{
 	opacity: 1;
 }
 footer{
-	background: #3e335f;
+	background: #335f4b;
 	padding: 20px;
 }
 
@@ -245,7 +245,7 @@ footer td a:hover{
 }
 .title{
 	padding: 10px;
-	background: #9577ee url(../media/logo.png) no-repeat left 20px center;
+	background: #1a8fd6 url(../media/logo.png) no-repeat left 20px center;
 	background-size: 40px;
 	text-align: left;
 	padding-left: 80px;
@@ -266,9 +266,10 @@ footer td a:hover{
 	display: block;
 	width: 100px;
 	height: 100px;
-	background: #9577ee url(../media/logo.png) no-repeat center center;
+	background: #1ad6a2 url(../media/logo.png) no-repeat center center;
 	background-size: 80%;
 	border-radius: 50%;
+	border: 3px solid rgb(119, 238, 178);
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
@@ -449,6 +450,7 @@ footer td a:hover{
 .module_planes{
 	background: #222;
 	/* height: 100%; */
+	display: none;
 }
 .module_planes table{
 	padding: 20px;
