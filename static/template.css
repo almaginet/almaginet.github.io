@@ -356,10 +356,10 @@ footer td a:hover{
 }
 
 .lN a{
-	display: block;
+	display: inline-block;
 	color: #fff;
 	font-size: 12px;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 .lN span{
 	width: 50px;
@@ -401,7 +401,7 @@ footer td a:hover{
 
 .module_eventos{
 	overflow: auto;
-	height: 100%;
+	/* height: 100%; */
 	padding-bottom: 100px;
 	padding-top: 10px;
 	overflow-x: hidden;
@@ -675,4 +675,78 @@ footer td a:hover{
 }
 .right:hover{
 	background: #fff;
+}
+
+
+
+
+@media screen and (max-width:833px){
+
+	.lN{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	left: 0;
+	top: auto;
+	z-index: 2;
+	bottom: 0;
+	background: #3F51B5;
+	vertical-align: top;
+	text-align: center;
+}
+ .lN a{
+ 	padding: 1px;
+ }
+
+ .right{
+	position: relative;
+	height: auto;
+	width: 100%;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	padding-top: 40px;
+	background: rgba(12, 51, 82, 0.54);
+	z-index: 1;
+	border-right: 1px solid #f8f2ff;
+	text-align: center;
+}
+
+.principalNav{
+	display: none;
+}
+
+.universe{
+	background: #333;
+	padding-right: 0px;
+	background: #333 url(../media/backend.gif) no-repeat top center;
+	background-attachment: fixed;
+	background-size: auto 100%;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-bottom: 100px;
+}
+
+footer td{
+	padding: 20px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.right-frame{
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.module_eventos{
+	overflow: auto;
+	/* height: 100%; */
+	padding-bottom: 0px;
+	padding-top: 10px;
+	overflow-x: hidden;
+}
+
 }
