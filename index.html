@@ -1,7 +1,8 @@
 <html>
 <head>
 	<title>Almaginet Developers</title>
-	<link rel="stylesheet" type="text/css" href="static/template.css?v=0.1.1">
+	<link rel="stylesheet" type="text/css" href="static/template.css?v=0.1.2">
+	<script type="text/javascript" src="static/js/main.js?=v=0.1.0"></script>
 	<meta charset="utf-8">
 </head>
 <body>
@@ -14,13 +15,13 @@
 			<div class="table">
 			<ul class="tableL"><li><a  ><strong>Ecuador (LA)</strong></a></li></ul>
 			<ul class="tableR">
-				<li><a  >Somos</a></li>
-				<li><a  >Eventos</a></li>
-				<li><a  >Academia</a></li>
-				<li><a  >Proyectos</a></li>
-				<li><a  >Perfiles</a></li>
-				<li><a  >Lugares</a></li>
-				<li><a  >Experiencias</a></li>
+				<li><a onclick="right01()" >Somos</a></li>
+				<li><a onclick="right02()" >Eventos</a></li>
+				<li><a onclick="right03()" >Academia</a></li>
+				<li><a onclick="right04()" >Proyectos</a></li>
+				<li><a onclick="right05()" >Perfiles</a></li>
+				<li><a onclick="right00()" >Lugares</a></li>
+				<li><a onclick="right01()" >Experiencias</a></li>
 				<li class="logo"><a  >Almaginet.com</a></li>
 			</ul>
 			</div>
@@ -30,11 +31,42 @@
 				<div class="avatar"></div>
 			<h1>Construye hoy tu Imagen Social 2.0</h1>
 			<h2>Conecta con profesionales y crea impacto tecnológico en tus proyectos</h2>
-			<a   class="action">CONOCE ALMAGINET</a>
+			<a onclick="tlf()" class="action">CONOCE ALMAGINET<span id="tlf" class="hidden">09 8734 9167</span></a>
 			<br/>
 			<p>Brasil</p><p>Chile</p><p>Colombia</p><p>Ecuador</p><p>México</p><p>USA</p><p>Venezuela</p>
 			</section>
 		</div>
+
+		<nav class="right">
+		<article class="right-frame" id="right00">
+		<div class="avatar"></div>
+		<h2 class="humaArte">Huma<span>Arte</span></h2>
+		<a href="#" class="button" id="whatsApp"+>+593 9 8734 9167</a>
+		<img src="media/avatars/ecuador.jpg" class="hechoEnEcuador">
+		</article>
+
+		<article class="right-frameClose" id="right01">
+			<div class="fb-page" data-href="https://www.facebook.com/HumaArte-641058902716392/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/HumaArte-641058902716392/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/HumaArte-641058902716392/">HumaArte</a></blockquote></div>
+		</article>
+
+		<article class="right-frameClose" id="right02">
+		
+		</article>
+
+		<article class="right-frameClose" id="right03">
+			
+		</article>
+
+		<article class="right-frameClose" id="right04">
+			
+		</article>
+
+		<article class="right-frameClose" id="right05">
+		
+		</article>
+
+	</nav>
+
 	</section>
 	<section class="features">
 
@@ -60,7 +92,7 @@
 
 	<section class="call">
 		<p>En Almaginet conectamos profesionales apasionados y comprometidos en construir proyectos innovadores para lograr un impacto positivo en el planeta desde América Latina.</p>
-		<a   class="action">Involúcrate</a>
+		<a   onclick="inv()" class="action">Involúcrate <span id="inv" class="hidden">09 8734 9167</span></a>
 	</section>
 
 	<section class="team">

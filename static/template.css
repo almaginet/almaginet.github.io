@@ -164,6 +164,7 @@ h2{
 
 .action:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 
 #feature01{
@@ -578,4 +579,67 @@ footer td a:hover{
 	font-size: 33px;
 	display: block;
 	padding: 20px;
+}
+.hidden{
+	display: none;
+}
+.show{
+	display: block;
+	font-weight: bold;
+	padding: 20px;
+	padding-left: 40px;
+	background: url(../media/icons/2.png) no-repeat left center;
+	background-size: 30px;
+}
+
+.right-frame{
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.right-frameClose{
+	background: #fff;
+	border-radius: 5px;
+	padding: 0px;
+	width: 0%;
+	height: 0%;
+	overflow: hidden;
+	border-bottom: 0px!important;
+}
+#right00{
+	border-bottom: 30px solid #009688;
+}
+#right01{
+	border-bottom: 30px solid #6573c3;
+}
+#right02{
+	border-bottom: 30px solid #4dabf5;
+}
+#right03{
+	border-bottom: 30px solid #f6685e;
+}
+#right04{
+	border-bottom: 30px solid #ffac33;
+}
+#right05{
+	border-bottom: 30px solid #ed4b82;
+}
+
+.right{
+	position: fixed;
+	height: 100%;
+	width: 300px;
+	right: 60;
+	top: 0;
+	padding: 10px;
+	background: #f8f2ff;
+	z-index: 4;
+	border-right: 1px solid #f8f2ff;
+	text-align: center;
+}
+.right:hover{
+	background: #fff;
 }
