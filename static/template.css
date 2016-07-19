@@ -16,12 +16,22 @@ box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
 
-.portraid{
-	width: 100%;
-	text-align: center;
+.universe{
+	background: #333;
+	padding-right: 300px;
 	background: #333 url(../media/backend.gif) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
+	padding-top: 28px;
+	padding-left: 80px;
+}
+
+.portraid{
+	width: 100%;
+	text-align: center;
+	/* background: #333 url(../media/backend.gif) no-repeat top center; */
+	/* background-attachment: fixed; */
+	/* background-size: 100%; */
 	min-height: 100%;
 }
 
@@ -39,7 +49,7 @@ box-sizing:border-box;
 	opacity: 0.5
 }
 .padding{
-	padding: 100px;
+	padding: 50px;
 }
 
 h1{
@@ -57,6 +67,7 @@ h2{
 .features{
 	padding: 20px;
 	text-align: center;
+	background: #fff;
 }
 .features h3{
 	text-align: center;
@@ -68,8 +79,9 @@ h2{
 .features article{
 	display: inline-block;
 	vertical-align: top;
-	width: 300px;
+	width: 100%;
 	text-align: center;
+	border-bottom: 1px solid #e7e9f3;
 	padding: 10px;
 }
 
@@ -81,15 +93,15 @@ h2{
 	font-weight: normal;
 }
 .features article p{
-	font-size: 17px;
+	font-size: 14px;
 	padding-top: 5px;
 	color: #716490;
 	line-height: 1.5;
 }
 
 .circle{
-	width: 160px;
-	height: 160px;
+	width: 50px;
+	height: 50px;
 	margin: 0 auto;
 	border-radius: 50%;
 	background-color: #8294ee!important;
@@ -99,6 +111,12 @@ h2{
 .principalNav{
 	background: rgb(255, 255, 255);
 	text-align: right;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	border-bottom: 1px solid #f3f3f3;
+	z-index: 2;
 }
 .principalNav ul li{
 	display: inline-block;
@@ -107,17 +125,20 @@ h2{
 }
 .principalNav ul li:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 .principalNav ul li a{
 	display: block;
-	padding: 16px;
+	padding: 7px;
 	color: #464646;
-	font-size: 15px;
+	font-size: 12px;
 }
 .logo{
 	background: #2196F3 url(../media/almaginetWhite.png) no-repeat left 8px center;
-	background-size: 36px;
-	padding-left: 40px;
+	background-size: 26px;
+	padding-left: 30px;
+	width: 300px;
+	text-align: left;
 }
 .logo a{
 	color: #fff!important;
@@ -189,6 +210,7 @@ h2{
 .team{
 	padding: 20px;
 	text-align: center;
+	background: #fff;
 }
 .team h3{
 	text-align: center;
@@ -209,13 +231,17 @@ h2{
 .team article{
 	display: inline-block;
 	vertical-align: top;
-	width: 200px;
+	width: 100%;
 	height: 200px;
+	margin: 2px;
 	background: #3F51B5;
 	opacity: 0.9;
 	color: #fff;
 	padding: 5px 5px;
 	border-radius: 3px;
+}
+.team article h4{
+	font-size: 30px
 }
 .team article:hover{
 	opacity: 1;
@@ -260,10 +286,11 @@ footer td a:hover{
 	text-align: left;
 	padding-left: 65px;
 	background: url(../media/icons/ecuador.png) no-repeat left 22px center;
-	background-size: 33px;
+	background-size: 23px;
 }
 .tableR{
 	display: table-cell;
+	/* text-align: left; */
 }
 .title{
 	padding: 10px;
@@ -308,7 +335,7 @@ footer td a:hover{
 	height: 100%;
 	display: table-cell;
 	background: rgb(0, 0, 0);
-	padding-left: 80px;
+	/* padding-left: 80px; */
 }
 .eR{
 	width: 50%;
@@ -320,8 +347,9 @@ footer td a:hover{
 .lN{
 	width: 80px;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
+	top: 29px;
 	background: #3F51B5;
 	vertical-align: top;
 	text-align: center;
@@ -346,6 +374,7 @@ footer td a:hover{
 }
 .lN span:hover{
 	opacity: 1;
+	cursor: pointer;
 }
 
 #nv01{
@@ -373,6 +402,8 @@ footer td a:hover{
 .module_eventos{
 	overflow: auto;
 	height: 100%;
+	padding-bottom: 100px;
+	padding-top: 10px;
 	overflow-x: hidden;
 }
 .module_eventos table{
@@ -388,8 +419,9 @@ footer td a:hover{
 .module_eventosimg{
 	background: rgba(119, 150, 238, 0.84) url(../media/logo.png) no-repeat center center;
 	background-size: 90%;
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	margin: 10px auto;
+	height: 50px;
 	border-radius: 50%;
 	border: 3px solid rgba(255,255,255,0.3);
 }
@@ -424,7 +456,7 @@ footer td a:hover{
 	vertical-align: top;
 }
 .module_eventos h4{
-	font-size: 16px;
+	font-size: 14px;
 }
 .module_eventos h5{
 	display: inline-block;
@@ -447,7 +479,7 @@ footer td a:hover{
 	color: red;
 }
 .module_eventos p{
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 1.4;
 	padding: 5px 0;
 }
@@ -632,11 +664,12 @@ footer td a:hover{
 	position: fixed;
 	height: 100%;
 	width: 300px;
-	right: 60;
+	right: 0;
 	top: 0;
 	padding: 10px;
-	background: #f8f2ff;
-	z-index: 4;
+	padding-top: 40px;
+	background: rgba(12, 51, 82, 0.54);
+	z-index: 1;
 	border-right: 1px solid #f8f2ff;
 	text-align: center;
 }
