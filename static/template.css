@@ -142,7 +142,26 @@ h2{
 	margin: 20px auto;
 	border-radius: 3px;
 	opacity: 0.8;
+	  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
+
+@keyframes slidein {
+  from {
+  background:  #2196F3
+  }
+
+  75% {
+  background: red
+}
+
+  to {
+    background: #2196F3;
+  }
+}
+
 .action:hover{
 	opacity: 1;
 }
