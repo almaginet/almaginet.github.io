@@ -16,6 +16,17 @@ box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
 
+@font-face {
+    font-family: 'oswald';
+    src: url('fonts/oswald-regular/oswald-regular-webfont.eot');
+    src: url('fonts/oswald-regular/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/oswald-regular/oswald-regular-webfont.woff') format('woff'),
+         url('fonts/oswald-regular/oswald-regular-webfont.ttf') format('truetype'),
+         url('fonts/oswald-regular/oswald-regular-webfont.svg#paktregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .universe{
 	background: #333;
 	padding-right: 300px;
@@ -158,6 +169,7 @@ h2{
 .action{
 	background: #2196F3;
 	color: #fff;
+	font-family: oswald;
 	padding: 20px 50px;
 	display: inline-block;
 	margin: 20px auto;
