@@ -19,7 +19,7 @@ box-sizing:border-box;
 .portraid{
 	width: 100%;
 	text-align: center;
-	background: #333 url(../media/back01.jpg) no-repeat top center;
+	background: #333 url(../media/backend.gif) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
 	min-height: 100%;
@@ -268,8 +268,8 @@ footer td a:hover{
 	display: block;
 	width: 100px;
 	height: 100px;
-	background: #3F51B5 url(../media/almaginetWhite.png) no-repeat center top;
-	background-size: 144%;
+	background: #3F51B5 url(../media/onair.gif) no-repeat center top;
+	background-size: 100%;
 	border-radius: 50%;
 	border: 3px solid rgba(255, 255, 255, 0.36);
 	margin: 0 auto;
