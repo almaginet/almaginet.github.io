@@ -30,7 +30,7 @@ box-sizing:border-box;
 .universe{
 	background: #333;
 	padding-right: 300px;
-	background: #333 url(https://upload-assets.vice.com/files/2016/03/03/145703952827D4992A_482B_4A19_B4F0_A4B2F26AF546.jpg) no-repeat top center;
+	background: #333 url(https://upload.wikimedia.org/wikipedia/commons/2/22/Apollo_11_Saturn_V_near_the_end_of_rollout.jpg) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
 	padding-top: 28px;
@@ -48,7 +48,7 @@ box-sizing:border-box;
 
 .cortain{
 	width: 100%;
-	background: rgba(10, 11, 10, 0.9);
+	background: rgba(0, 0, 0, 0.8);
 	min-height: 100%;
 }
 
@@ -81,6 +81,7 @@ h2{
 	text-align: center;
 	background: #fff;
 	margin-top: 10px;
+	border-radius: 3px;
 }
 .features h3{
 	text-align: center;
@@ -641,7 +642,7 @@ footer td a:hover{
 }
 
 .right-frame{
-	background: rgba(255, 255, 255, 0.73);
+	background: rgba(0, 0, 0, 0.03);
 	/*! border-radius: 5px; */
 	padding: 10px;
 	width: 100%;
@@ -684,7 +685,7 @@ footer td a:hover{
 	top: 0;
 	padding: 10px;
 	padding-top: 40px;
-	background: rgba(12, 51, 82, 0.54);
+	background: rgba(255, 255, 255, 0.04);
 	z-index: 1;
 	border-right: 1px solid #f8f2ff;
 	text-align: center;
@@ -765,5 +766,7 @@ footer td{
 	padding-top: 10px;
 	overflow-x: hidden;
 }
-
+	.portraid{
+		height: auto;
+	}
 }
