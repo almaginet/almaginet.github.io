@@ -341,16 +341,17 @@ footer td a:hover{
 
 .eventos{
 	width: 100%;
-	height: 100%;
-	background: #333;
+	/* height: 100%; */
+	/* background: #333; */
 	display: table;
 }
 
 .el{
 	width: 50%;
-	height: 100%;
+	/* height: 100%; */
+	padding: 20px;
 	display: table-cell;
-	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.89);
 	/* padding-left: 80px; */
 }
 .eR{
@@ -473,7 +474,9 @@ footer td a:hover{
 	vertical-align: top;
 }
 .module_eventos h4{
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: oswald;
 }
 .module_eventos h5{
 	display: inline-block;
@@ -499,6 +502,7 @@ footer td a:hover{
 	font-size: 12px;
 	line-height: 1.4;
 	padding: 5px 0;
+	color: #587088;
 }
 .module_eventos td a{
 	padding: 10px;
@@ -604,6 +608,8 @@ footer td a:hover{
 	padding: 8px 20px;
 	line-height: 1.4;
 	font-size: 17px;
+	/* font-weight: normal; */
+	/* font-family: oswald; */
 }
 .module_detail a{
 	padding: 10px;
