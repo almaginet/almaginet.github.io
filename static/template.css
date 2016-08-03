@@ -259,6 +259,9 @@ h2{
 	text-align: center;
 	background: #fff;
 }
+.team p{
+	padding: 10px;
+}
 .team h3{
 	text-align: center;
 	padding: 20px;
