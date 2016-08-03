@@ -33,7 +33,7 @@ box-sizing:border-box;
 	background: #333 url(https://upload.wikimedia.org/wikipedia/commons/2/22/Apollo_11_Saturn_V_near_the_end_of_rollout.jpg) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
-	padding-top: 28px;
+	padding-top: 38px;
 	/*! padding-left: 80px; */
 }
 
@@ -62,7 +62,38 @@ box-sizing:border-box;
 .padding{
 	padding: 50px;
 }
-
+.lastProjects{
+	display: flex;
+	width: 100%;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items:;
+}
+.lastProjects a{
+	align-self:center;
+	flex-direction:row;
+	text-align: center;
+	margin: 0px!important;
+}
+.lastProjects article{
+	text-align: center;
+	width: 300px;
+	position: relative;
+	opacity: 0.8;
+	border-bottom: 5px solid #9C27B0;
+	}
+.lastProjects article:hover{
+	opacity: 1;
+}
+.lastProjects img{
+	width: 100%;
+	height: 300px;
+	background: #000;
+}
+.lastProjects article h4{
+	display: none;
+}
 h1{
 	color: #fff;
 	font-size: 43px;
@@ -150,14 +181,14 @@ h2{
 }
 .logo{
 	background: #2196F3 url(../media/almaginetWhite.png) no-repeat left 8px center;
-	background-size: 26px;
+	background-size: 30px;
 	padding-left: 30px;
 	width: 300px;
 	text-align: left;
 }
 .logo a{
 	color: #fff!important;
-	font-weight: bold;
+	font-size: 16px!important;
 }
 
 .call{
@@ -231,6 +262,8 @@ h2{
 .team h3{
 	text-align: center;
 	padding: 20px;
+	font-weight: normal;
+	font-family: oswald;
 	color: #3F51B5;
 	font-size: 30px;
 }
@@ -349,9 +382,9 @@ footer td a:hover{
 .el{
 	width: 50%;
 	/* height: 100%; */
-	padding: 20px;
+	/* padding: 20px; */
 	display: table-cell;
-	background: rgba(0, 0, 0, 0.89);
+	background: #673AB7;
 	/* padding-left: 80px; */
 }
 .eR{
@@ -515,11 +548,16 @@ footer td a:hover{
 }
 .tag{
 	background: #3F51B5 url(../media/icons/exp.png) no-repeat left 3px center;
+	font-weight: bold;
+	padding: 10px;
 	background-size: 25px;
 }
 .location{
 	background: #2196F3 url(../media/icons/100.png) no-repeat left 3px center;
+	font-size: 18px;
 	background-size: 25px;
+	padding: 10px;
+	font-family: oswald;
 }
 
 .module_planes{
@@ -602,23 +640,24 @@ footer td a:hover{
 }
 .module_detail_info h2{
 	color: #fff;
-	font-size: 26px;
+	font-size: 46px;
+	font-family: oswald;
 }
 .module_detail_info p{
-	padding: 8px 20px;
+	padding: 50px 20px;
 	line-height: 1.4;
-	font-size: 17px;
+	font-size: 21px;
 	/* font-weight: normal; */
 	/* font-family: oswald; */
 }
 .module_detail a{
-	padding: 10px;
-	padding-left: 30px;
-	margin: 5px 1px;
+	/* padding: 10px; */
+	/* padding-left: 30px; */
+	vertical-align: top;
 	display: inline-block;
 	color: #fff;
 	font-size: 12px;
-	border-radius: 5px
+	border-radius: 5px;
 }
 
 .contacta{
@@ -705,6 +744,11 @@ footer td a:hover{
 
 @media screen and (max-width:833px){
 
+.lastProjects{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
 	.lN{
 	width: 100%;
 	height: auto;
