@@ -359,9 +359,10 @@ footer td a:hover{
 	color: #e0d5ff;
 	font-size: 30px;
 	text-align: center;
+	font-family: oswald;
 	font-weight: normal;
 	text-transform: uppercase;
-	padding: 70px 5px;
+	padding: 50px 5px;
 }
 .avatar{
 	display: block;
@@ -375,6 +376,42 @@ footer td a:hover{
 	margin-bottom: 20px;
 }
 
+.proceso{
+	background: #673AB7;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+}
+.proceso article{
+	display: inline-block;
+	width: 200px;
+	vertical-align: top;
+	margin: 5px;
+}
+.proceso article span{
+	display: block;
+	width: 80px;
+	height: 80px;
+	border: 2px solid white;
+	margin: 10px auto;
+	border-radius: 50%;
+	font-family: oswald;
+	font-size: 50px;
+}
+.proceso h3{
+	font-family: oswald;
+	font-weight: normal;
+	font-size: 20px;
+	padding: 10px;
+}
+.proceso article h3{
+	font-size: 16px;
+}
+.proceso p{
+	opacity: 0.9;
+	line-height: 1.5;
+	font-size: 12px;
+}
 .eventos{
 	width: 100%;
 	/* height: 100%; */
@@ -551,7 +588,8 @@ footer td a:hover{
 }
 .tag{
 	background: #3F51B5 url(../media/icons/exp.png) no-repeat left 3px center;
-	font-weight: bold;
+	font-weight: normal;
+	font-family: oswald;
 	padding: 10px;
 	background-size: 25px;
 }
@@ -566,7 +604,7 @@ footer td a:hover{
 .module_planes{
 	background: #222;
 	/* height: 100%; */
-	display: none;
+	/* display: none; */
 }
 .module_planes table{
 	padding: 20px;
@@ -676,6 +714,8 @@ footer td a:hover{
 	font-size: 33px;
 	display: block;
 	padding: 20px;
+	font-weight: normal;
+	font-family: oswald;
 }
 .hidden{
 	display: none;
@@ -746,6 +786,15 @@ footer td a:hover{
 
 
 @media screen and (max-width:833px){
+
+.module_planes_01{
+	background: rgba(0,0,0,0.2);
+	padding: 40px 0;
+	opacity: 0.8;
+	width: 100%;
+	display: block;
+	vertical-align: top;
+}
 
 .lastProjects{
 	display: flex;
