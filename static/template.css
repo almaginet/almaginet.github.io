@@ -28,11 +28,11 @@ box-sizing:border-box;
 }
 
 .universe{
-	background: #333;
-	padding-right: 300px;
-	background: #333 url(https://upload.wikimedia.org/wikipedia/commons/2/22/Apollo_11_Saturn_V_near_the_end_of_rollout.jpg) no-repeat top center;
-	background-attachment: fixed;
-	background-size: 100%;
+	/*! background: #333; */
+	/*! padding-right: 300px; */
+	background: #9058FC url(../media/backs.png);
+	/*! background-attachment: fixed; */
+	/*! background-size: 100%; */
 	padding-top: 38px;
 	/*! padding-left: 80px; */
 }
@@ -40,7 +40,7 @@ box-sizing:border-box;
 .portraid{
 	width: 100%;
 	text-align: center;
-	/* background: #333 url(../media/backend.gif) no-repeat top center; */
+	/*! background: #4B4848 url(../media/backend.gif) no-repeat top center; */
 	/* background-attachment: fixed; */
 	/* background-size: 100%; */
 	height: 100%;
@@ -48,7 +48,7 @@ box-sizing:border-box;
 
 .cortain{
 	width: 100%;
-	background: rgba(0, 0, 0, 0.8);
+	/*! background: rgba(0, 0, 0, 0.8); */
 	min-height: 100%;
 }
 
@@ -67,7 +67,7 @@ box-sizing:border-box;
 	width: 100%;
 	flex-direction:row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items:;
 }
 .lastProjects a{
@@ -96,13 +96,13 @@ box-sizing:border-box;
 }
 h1{
 	color: #fff;
-	font-size: 43px;
+	font-size: 46px;
 	font-weight: normal;
 	font-family: oswald;
 }
 h2{
-	color: #dbd0e6;
-	font-size: 20px;
+	color: #f0ebf5;
+	font-size: 24px;
 	padding-top: 10px;
 	font-weight: normal;
 }
@@ -133,13 +133,13 @@ h2{
 .features article h4{
 	padding: 5px;
 	padding-top: 10px;
-	font-size: 22px;
+	font-size: 26px;
 	font-family: oswald;
 	color: #715e9e;
 	font-weight: normal;
 }
 .features article p{
-	font-size: 14px;
+	font-size: 16px;
 	padding-top: 5px;
 	color: #716490;
 	line-height: 1.5;
@@ -194,7 +194,7 @@ h2{
 
 .call{
 	padding: 60px;
-	background: #333;
+	background: RGBA(63, 197, 219, 0.29);
 	text-align: center;
 }
 .call p{
@@ -285,9 +285,9 @@ h2{
 	display: inline-block;
 	vertical-align: top;
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
 	margin: 2px;
-	background: #3F51B5;
+	background: #478BD7 url(../media/backs.png);
 	opacity: 0.9;
 	color: #fff;
 	padding: 5px 5px;
@@ -357,7 +357,7 @@ footer td a:hover{
 }
 
 .title01{
-	color: #e0d5ff;
+	color: #fff;
 	font-size: 30px;
 	text-align: center;
 	font-family: oswald;
@@ -511,15 +511,15 @@ footer td a:hover{
 .module_eventosimg{
 	background: rgba(119, 150, 238, 0.84) url(../media/logo.png) no-repeat center center;
 	background-size: 90%;
-	width: 50px;
+	width: 70px;
 	margin: 10px auto;
-	height: 50px;
+	height: 70px;
 	border-radius: 50%;
 	border: 3px solid rgba(255,255,255,0.3);
 }
 #exp01{
-	background: #3F51B5 url(../media/icons/12.png) no-repeat center center;
-	background-size: 80%;
+	background: #3F51B5 url(../media/team.jpg) no-repeat center center;
+	background-size: 130%;
 }
 
 #exp02{
@@ -603,9 +603,10 @@ footer td a:hover{
 }
 
 .module_planes{
-	background: #222;
+	background: #404557 url(../media/backs.png) repeat;
 	/* height: 100%; */
 	/* display: none; */
+	background-size: 600px;
 }
 .module_planes table{
 	padding: 20px;
@@ -784,6 +785,24 @@ footer td a:hover{
 }
 
 
+.rightNone{
+	position: fixed;
+	display: none;
+	height: 100%;
+	width: 300px;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	padding-top: 40px;
+	background: rgba(255, 255, 255, 0.04);
+	z-index: 1;
+	border-right: 1px solid #f8f2ff;
+	text-align: center;
+}
+.rightNone:hover{
+	background: #fff;
+}
+
 
 
 @media screen and (max-width:833px){
@@ -838,9 +857,9 @@ footer td a:hover{
 }
 
 .universe{
-	background: #333;
-	padding-right: 0px;
-	background: #333 url(https://upload-assets.vice.com/files/2016/03/03/145703952827D4992A_482B_4A19_B4F0_A4B2F26AF546.jpg) no-repeat top center;
+	/*! background: #333; */
+	/*! padding-right: 0px; */
+	/*! background: #333 url(https://upload-assets.vice.com/files/2016/03/03/145703952827D4992A_482B_4A19_B4F0_A4B2F26AF546.jpg) no-repeat top center; */
 	background-attachment: fixed;
 	background-size: auto 100%;
 	padding-top: 0px;

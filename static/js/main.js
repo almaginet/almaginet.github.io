@@ -28,9 +28,11 @@ function right01()
             document.getElementById('right03').className = 'right-frameClose';
             document.getElementById('right04').className = 'right-frameClose';
             document.getElementById('right05').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right01').className = 'right-frameClose';
                 document.getElementById('right00').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     } 
 
@@ -44,9 +46,11 @@ function right02()
             document.getElementById('right03').className = 'right-frameClose';
             document.getElementById('right04').className = 'right-frameClose';
             document.getElementById('right05').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right02').className = 'right-frameClose';
                 document.getElementById('right00').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     }
 
@@ -60,9 +64,11 @@ function right03()
             document.getElementById('right01').className = 'right-frameClose';
             document.getElementById('right04').className = 'right-frameClose';
             document.getElementById('right05').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right03').className = 'right-frameClose';
                 document.getElementById('right00').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     }
 
@@ -76,9 +82,11 @@ function right04()
             document.getElementById('right03').className = 'right-frameClose';
             document.getElementById('right01').className = 'right-frameClose';
             document.getElementById('right05').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right04').className = 'right-frameClose';
                 document.getElementById('right00').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     }
 
@@ -92,9 +100,11 @@ function right05()
             document.getElementById('right03').className = 'right-frameClose';
             document.getElementById('right04').className = 'right-frameClose';
             document.getElementById('right01').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right05').className = 'right-frameClose';
                 document.getElementById('right00').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     }
 
@@ -108,8 +118,10 @@ function right00()
             document.getElementById('right03').className = 'right-frameClose';
             document.getElementById('right04').className = 'right-frameClose';
             document.getElementById('right01').className = 'right-frameClose';
+            document.getElementById('right').className = 'right';
             } else {
                 document.getElementById('right00').className = 'right-frameClose';
                 document.getElementById('right01').className = 'right-frame';
+                document.getElementById('right').className = 'rightNone';
                     }
     }
