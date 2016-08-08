@@ -27,6 +27,69 @@ box-sizing:border-box;
     font-style: normal;
 }
 
+.comunidad header{
+	background: #c14132 url(../media/backs.png);
+	background-size: 400px;
+	color: #fff;
+	padding: 30px;
+	text-align: center;
+}
+.comunidad h3{
+	font-size: 40px;
+	font-weight: normal;
+	font-family: oswald;
+}
+.comunidad h3 span{
+	display: block;
+	font-size: 18px;
+}
+.comunidad section{
+	background: #c13832 url(../media/backs.png);
+	background-size: 400px;
+	padding: 20px;
+	text-align: center;
+}
+.comunidad article{
+	display: inline-block;
+	width:160px;
+	height: 160px;
+	margin: 10px 5px;
+	position: relative;
+}
+.comunidad article a{
+	display: block;
+}
+.comunidad article img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.comunidad article h4{
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: #c14132 url(../media/backs.png);
+	background-size: 400px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	font-family: oswald;
+	font-weight: normal;
+	padding-top: 50%;
+	opacity: 0;
+}
+.comunidad article h4:hover{
+	opacity: 1;
+}
+
+.comunidad article h4 span{
+	display: block;
+	padding: 5px 0;
+	font-size: 12px;
+}
 .universe{
 	/*! background: #333; */
 	/*! padding-right: 300px; */
@@ -35,6 +98,67 @@ box-sizing:border-box;
 	/*! background-size: 100%; */
 	padding-top: 38px;
 	/*! padding-left: 80px; */
+	/*! height: 100%; */
+}
+
+.experiencias header{
+	background: #00b086 url(../media/backs.png);
+	background-size: 400px;
+	color: #fff;
+	padding: 30px;
+	text-align: center;
+}
+.experiencias h3{
+	font-size: 40px;
+	font-weight: normal;
+	font-family: oswald;
+}
+.experiencias h3 span{
+	display: block;
+	font-size: 18px;
+}
+.experiencias section{
+	background: #ddd url(../media/backs.png);
+	background-size: 400px;
+	padding: 20px;
+	text-align: center;
+}
+.experiencias article{
+	display: inline-block;
+	width:260px;
+	margin: 10px 5px;
+	position: relative;
+	background: #fff;
+	opacity: 0.8;
+}
+.experiencias article:hover{
+	opacity: 1;
+}
+.experiencias article a{
+	display: block;
+}
+.experiencias article img{
+	width: 100%;
+	height: 260px;
+}
+.experiencias article h4{
+	font-size: 20px;
+	font-family: oswald;
+	font-weight: normal;
+	padding: 20px;
+	padding-bottom: 0;
+}
+
+.experiencias article h4 span{
+	display: block;
+	padding: 5px 0;
+	font-size: 12px;
+}
+
+.experiencias article p{
+	padding: 20px;
+	font-size: 14px;
+	color: #666;
 }
 
 .portraid{
@@ -43,7 +167,7 @@ box-sizing:border-box;
 	/*! background: #4B4848 url(../media/backend.gif) no-repeat top center; */
 	/* background-attachment: fixed; */
 	/* background-size: 100%; */
-	height: 100%;
+	min-height: 100%;
 }
 
 .cortain{
@@ -300,7 +424,7 @@ h2{
 	opacity: 1;
 }
 footer{
-	background: #2a3675;
+	background: #2a3675 url(../media/stars.png);
 	padding: 20px;
 }
 
@@ -704,8 +828,8 @@ footer td a:hover{
 }
 
 .contacta{
-	background: rgba(0,0,0,0.1) url(../media/icons/21.png) no-repeat bottom 20px center;
-	background-size: 80px;
+	background: rgba(0,0,0,0.1) url(../media/rocket.png) no-repeat bottom 20px center;
+	background-size: 90px;
 	border-radius: 5px;
 	padding: 20px;
 	padding-bottom: 133px;
@@ -783,7 +907,6 @@ footer td a:hover{
 .right:hover{
 	background: #fff;
 }
-
 
 .rightNone{
 	position: fixed;
