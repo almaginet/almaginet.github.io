@@ -62,7 +62,13 @@ box-sizing:border-box;
 .comunidad article img{
 	width: 100%;
 	height: 100%;
-	border-radius: 5px;
+	border-radius: 50%;
+	border: 3px solid rgba(255,255,255,0.5);
+	-webkit-filter: sepia(1);
+	-ms-filter: sepia(1);
+	-o-filter: sepia(1);
+	-mozilla-filter: sepia(1);
+filter: sepia(1);
 }
 .comunidad article h4{
 	display: block;
@@ -78,7 +84,7 @@ box-sizing:border-box;
 	color: #fff;
 	font-family: oswald;
 	font-weight: normal;
-	padding-top: 50%;
+	padding-top: 40%;
 	opacity: 0;
 }
 .comunidad article h4:hover{
@@ -960,6 +966,25 @@ footer td a:hover{
  .lN a{
  	padding: 1px;
  }
+	
+	
+.comunidad article h4{
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background:rgba(0,0,0,0.4);
+	border: 2px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	font-family: oswald;
+	font-weight: normal;
+	padding-top: 40%;
+	opacity: 1;
+}
+
 
  .right{
 	position: relative;
