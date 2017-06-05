@@ -131,11 +131,12 @@ filter: sepia(1);
 }
 .experiencias article{
 	display: inline-block;
-	width:260px;
+	width:300px;
 	margin: 10px 5px;
 	position: relative;
 	background: #fff;
 	opacity: 0.8;
+	vertical-align: top;
 }
 .experiencias article:hover{
 	opacity: 1;
@@ -255,7 +256,7 @@ h2{
 .features article{
 	display: inline-block;
 	vertical-align: top;
-	width: 100%;
+	width: 49%;
 	text-align: center;
 	border-bottom: 1px solid #e7e9f3;
 	padding: 10px;
@@ -330,7 +331,7 @@ h2{
 }
 .call p{
 	color: #fff;
-	font-size: 22px;
+	font-size: 30px;
 }
 
 .action{
@@ -415,7 +416,7 @@ h2{
 .team article{
 	display: inline-block;
 	vertical-align: top;
-	width: 100%;
+	width: 200px;
 	min-height: 200px;
 	margin: 2px;
 	background: #478BD7 url(../media/backs.png);
@@ -425,7 +426,7 @@ h2{
 	border-radius: 3px;
 }
 .team article h4{
-	font-size: 30px
+	font-size: 20px;
 }
 .team article:hover{
 	opacity: 1;
