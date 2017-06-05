@@ -170,15 +170,16 @@ filter: sepia(1);
 .portraid{
 	width: 100%;
 	text-align: center;
-	/*! background: #4B4848 url(../media/backend.gif) no-repeat top center; */
-	/* background-attachment: fixed; */
-	/* background-size: 100%; */
+	background: #4B4848 url(http://www.humaarte.com/wp-content/themes/humaarte-wp-theme/assets/img/back-02.jpg) no-repeat top center;
+	background-attachment: fixed;
+	background-size: 100%;
 	min-height: 100%;
+	height: 100%;
 }
 
 .cortain{
 	width: 100%;
-	/*! background: rgba(0, 0, 0, 0.8); */
+	background: rgba(21, 4, 50, 0.68);
 	min-height: 100%;
 }
 
