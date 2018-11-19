@@ -28,7 +28,7 @@ box-sizing:border-box;
 }
 
 .comunidad header{
-	background: #c14132 url(../media/backs.png);
+	background: blueviolet url(../media/backs.png);
 	background-size: 400px;
 	color: #fff;
 	padding: 30px;
@@ -44,7 +44,7 @@ box-sizing:border-box;
 	font-size: 18px;
 }
 .comunidad section{
-	background: #c13832 url(../media/backs.png);
+	background: blueviolet url(../media/backs.png);
 	background-size: 400px;
 	padding: 20px;
 	text-align: center;
@@ -77,7 +77,7 @@ filter: sepia(1);
 	width: 100%;
 	height: 100%;
 	padding: 20px;
-	background: #c14132 url(../media/backs.png);
+	background: green url(../media/backs.png);
 	background-size: 400px;
 	border: 2px solid #fff;
 	border-radius: 5px;
@@ -171,7 +171,7 @@ filter: sepia(1);
 .portraid{
 	width: 100%;
 	text-align: center;
-	background: #4B4848 url(../media/g337.png) no-repeat top center;
+	background: blueviolet url(../media/back01.jpg) no-repeat top center;
 	background-attachment: fixed;
 	background-size: 100%;
 	min-height: 100%;
@@ -313,7 +313,7 @@ h2{
 	font-family: oswald;
 }
 .logo{
-	background: #2196F3 url(../media/almaginetWhite.png) no-repeat left 8px center;
+	background: blueviolet url(../media/logo02.png) no-repeat left 8px center;
 	background-size: 30px;
 	padding-left: 30px;
 	width: 300px;
@@ -335,7 +335,7 @@ h2{
 }
 
 .action{
-	background: #2196F3;
+	background: green;
 	color: #fff;
 	font-family: oswald;
 	padding: 20px 50px;
@@ -355,7 +355,7 @@ h2{
   }
 
   75% {
-  background: red
+  background: blueviolet
 }
 
   to {
@@ -501,8 +501,8 @@ footer td a:hover{
 	display: block;
 	width: 100px;
 	height: 100px;
-	background: RGBA(243, 243, 249, 0.09) url(../media/onair.gif) no-repeat center top;
-	background-size: 100%;
+	background: white url(../media/logo02.png) no-repeat center top;
+	background-size: 90%;
 	border-radius: 50%;
 	/*! border: 3px solid rgba(255, 255, 255, 0.36); */
 	margin: 0 auto;
