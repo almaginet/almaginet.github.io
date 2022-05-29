@@ -2198,7 +2198,12 @@ function right00()
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=AfGWa8w_ZiIryx0yg-xYllxhqOl2-8os3cYl058OzFCTU2bnIqtFd8DwXMnFj3kn7O8_51GiQagaFIkJ&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
       paypal.Buttons({
@@ -2212,7 +2217,7 @@ function right00()
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"description":"abono pagina web","amount":{"currency_code":"USD","value":65}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":65}}]
           });
         },
 
