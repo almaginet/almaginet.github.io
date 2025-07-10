@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Juego con Guitarra + Dashboard</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0; padding: 0 20px;
+    }
+    h1 { margin: 15px 0; }
+    .flex-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    select, input[type=text], button {
+      padding: 6px 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+    table {
+      margin: 10px auto;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+    }
+    #gameArea {
+      position: relative;
+      height: 300px;
+      background: #222;
+      margin: 20px auto;
+      width: 100%;
+      max-width: 600px;
+      overflow: hidden;
+      border: 2px solid #555;
+      border-radius: 10px;
+    }
+    #character {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      width: 50px;
+      height: 100px;
+      background: #4caf50;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+    .jump { animation: jump 0.6s ease; }
+    .duck { transform: scaleY(0.5); }
+    .shine { background: gold; }@keyframes jump {
+  0% { bottom: 0; }
+  50% { bottom: 120px; }
+  100% { bottom: 0; }
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  width: 30px;
+  height: 60px;
+  background: red;
+  animation: moveObstacle 4s linear infinite;
+}
+
+@keyframes moveObstacle {
+  0% { right: -50px; }
+  100% { right: 650px; }
+}
+
+#currentNote {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+  </style>
+</head>
+<body><h1>Juego Guitarra Hero + Dashboard</h1><div class="flex-row">
+  <select id="noteSelect"></select>
+  <select id="octaveSelect"></select>
+  <select id="actionSelect"></select>
+  <button id="addNoteBtn">Agregar Nota</button>
+</div><div class="flex-row">
+  <input type="text" id="profileName" placeholder="Nombre afinación" />
+  <button id="saveProfileBtn">Guardar Afinación</button>
+  <button id="loadProfileBtn">Cargar Afinación</button>
+  <select id="profilesList"></select>
+</div><table>
+  <thead>
+    <tr><th>Nota</th><th>Acción</th><th>Eliminar</th></tr>
+  </thead>
+  <tbody id="mappingTableBody"></tbody>
+</table><div id="currentNote">Detectando nota...</div><div id="gameArea">
+  <div id="character"></div>
+</div><script>
+  const NOTE_NAMES = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"];
+  const ACTIONS = ["Ninguna", "Saltar", "Agacharse", "Especial"];
+  let mappings = [];
+  let audioCtx, analyser, buffer, sampleRate;
+  const noteSelect = document.getElementById("noteSelect");
+  const octaveSelect = document.getElementById("octaveSelect");
+  const actionSelect = document.getElementById("actionSelect");
+  const addNoteBtn = document.getElementById("addNoteBtn");
+  const mappingTableBody = document.getElementById("mappingTableBody");
+  const currentNoteDiv = document.getElementById("currentNote");
+  const profileNameInput = document.getElementById("profileName");
+  const saveProfileBtn = document.getElementById("saveProfileBtn");
+  const loadProfileBtn = document.getElementById("loadProfileBtn");
+  const profilesList = document.getElementById("profilesList");
+  const character = document.getElementById("character");
+  const gameArea = document.getElementById("gameArea");
+
+  function populateSelectors() {
+    NOTE_NAMES.forEach(n => noteSelect.innerHTML += `<option value="${n}">${n}</option>`);
+    for(let i=1; i<=6; i++) octaveSelect.innerHTML += `<option value="${i}">${i}</option>`;
+    ACTIONS.forEach(a => actionSelect.innerHTML += `<option value="${a}">${a}</option>`);
+  }
+
+  function renderTable() {
+    mappingTableBody.innerHTML = "";
+    mappings.forEach((m, i) => {
+      mappingTableBody.innerHTML += `
+        <tr>
+          <td>${m.note}</td>
+          <td>
+            <select data-index="${i}">
+              ${ACTIONS.map(a => `<option value="${a}" ${a === m.action ? "selected" : ""}>${a}</option>`).join("")}
+            </select>
+          </td>
+          <td><button onclick="mappings.splice(${i},1);renderTable()">X</button></td>
+        </tr>`;
+    });
+    document.querySelectorAll("select[data-index]").forEach(sel =>
+      sel.onchange = e => mappings[sel.dataset.index].action = sel.value
+    );
+  }
+
+  addNoteBtn.onclick = () => {
+    const note = noteSelect.value + octaveSelect.value;
+    const action = actionSelect.value;
+    if (mappings.find(m => m.note === note)) return alert("Nota ya asignada.");
+    mappings.push({ note, action });
+    renderTable();
+  };
+
+  saveProfileBtn.onclick = () => {
+    const name = profileNameInput.value.trim();
+    if (!name) return alert("Escribe un nombre.");
+    localStorage.setItem("profile-" + name, JSON.stringify(mappings));
+    updateProfilesList();
+  };
+
+  loadProfileBtn.onclick = () => {
+    const name = profilesList.value;
+    if (!name) return;
+    const data = localStorage.getItem("profile-" + name);
+    if (data) {
+      mappings = JSON.parse(data);
+      renderTable();
+    }
+  };
+
+  function updateProfilesList() {
+    profilesList.innerHTML = '<option value="">--Selecciona--</option>';
+    for (let i = 0; i < localStorage.length; i++) {
+      let k = localStorage.key(i);
+      if (k.startsWith("profile-")) {
+        let name = k.replace("profile-", "");
+        profilesList.innerHTML += `<option value="${name}">${name}</option>`;
+      }
+    }
+  }
+
+  function autoCorrelate(buf, rate) {
+    let SIZE = buf.length, rms = 0;
+    for (let i = 0; i < SIZE; i++) rms += buf[i] * buf[i];
+    rms = Math.sqrt(rms / SIZE);
+    if (rms < 0.01) return -1;
+    let r1 = 0, r2 = SIZE - 1, thres = 0.2;
+    for (let i = 0; i < SIZE/2; i++) if (Math.abs(buf[i]) < thres) { r1 = i; break; }
+    for (let i = 1; i < SIZE/2; i++) if (Math.abs(buf[SIZE - i]) < thres) { r2 = SIZE - i; break; }
+    buf = buf.slice(r1, r2); SIZE = buf.length;
+    let c = Array(SIZE).fill(0);
+    for (let lag = 0; lag < SIZE; lag++) {
+      for (let i = 0; i < SIZE - lag; i++) c[lag] += buf[i] * buf[i + lag];
+    }
+    let d = 0; while (c[d] > c[d+1]) d++;
+    let maxPos = -1, maxVal = -1;
+    for (let i = d; i < SIZE; i++) if (c[i] > maxVal) { maxVal = c[i]; maxPos = i; }
+    let T0 = maxPos;
+    let x1 = c[T0 - 1], x2 = c[T0], x3 = c[T0 + 1];
+    let a = (x1 + x3 - 2 * x2) / 2, b = (x3 - x1) / 2;
+    if (a) T0 = T0 - b / (2 * a);
+    return rate / T0;
+  }
+
+  function getNoteName(freq) {
+    const A4 = 440;
+    const noteNum = Math.round(12 * Math.log2(freq / A4)) + 69;
+    const noteIndex = (noteNum + 12) % 12;
+    const octave = Math.floor(noteNum / 12);
+    return { name: NOTE_NAMES[noteIndex], octave };
+  }
+
+  function triggerAction(action) {
+    if (action === "Saltar") {
+      character.classList.add("jump");
+      setTimeout(() => character.classList.remove("jump"), 600);
+    } else if (action === "Agacharse") {
+      character.classList.add("duck");
+      setTimeout(() => character.classList.remove("duck"), 500);
+    } else if (action === "Especial") {
+      character.classList.add("shine");
+      setTimeout(() => character.classList.remove("shine"), 500);
+    }
+  }
+
+  function detectNote() {
+    analyser.getFloatTimeDomainData(buffer);
+    const freq = autoCorrelate(buffer, sampleRate);
+    if (freq !== -1) {
+      const note = getNoteName(freq);
+      const fullNote = note.name + note.octave;
+      currentNoteDiv.textContent = `Nota: ${fullNote} (${freq.toFixed(1)} Hz)`;
+      const match = mappings.find(m => m.note === fullNote && m.action !== "Ninguna");
+      if (match) {
+        currentNoteDiv.style.color = "lightgreen";
+        triggerAction(match.action);
+      } else {
+        currentNoteDiv.style.color = "#eee";
+      }
+    } else {
+      currentNoteDiv.textContent = "Detectando nota...";
+      currentNoteDiv.style.color = "#eee";
+    }
+    requestAnimationFrame(detectNote);
+  }
+
+  function startAudio() {
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 2048;
+      buffer = new Float32Array(analyser.fftSize);
+      sampleRate = audioCtx.sampleRate;
+      const source = audioCtx.createMediaStreamSource(stream);
+      source.connect(analyser);
+      detectNote();
+    });
+  }
+
+  function spawnObstacle() {
+    const obs = document.createElement("div");
+    obs.classList.add("obstacle");
+    gameArea.appendChild(obs);
+    setTimeout(() => obs.remove(), 4000);
+    setTimeout(spawnObstacle, 3000 + Math.random() * 2000);
+  }
+
+  // Init
+  populateSelectors();
+  updateProfilesList();
+  startAudio();
+  spawnObstacle();
+</script></body>
+</html>
